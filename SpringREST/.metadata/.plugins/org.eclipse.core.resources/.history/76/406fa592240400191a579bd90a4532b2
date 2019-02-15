@@ -1,0 +1,47 @@
+package com.vidhyac.zipcode.resource;
+
+import java.util.List;
+import java.util.Map;
+
+import javax.ws.rs.FormParam;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+import com.vidhyac.validation.model.User;
+import com.vidhyac.zipcode.dao.InfoDAO;
+import com.vidhyac.zipcode.model.Info;
+
+@Path("zipcode")
+public class ZipCode {
+	
+	InfoDAO dao=new InfoDAO();
+	
+	@POST
+	@Produces
+	public String showInfo(@FormParam("zipcode") long zipcode){
+		
+		 for (Map.Entry<Long,Info> entry : dao.getInfo().entrySet())  {
+			  if(entry.getKey()==99501) {
+				  Info info=entry.getValue();
+				  return "Value is "+info;
+			  }
+				  
+	            
+		 }
+	          
+	            /*entry.getValue()); */
+		
+		/*for(Map<Long, Info> info:dao.getInfo())*/
+		
+		
+		
+		if(zipcode==99501L) {
+			
+			
+		}
+		return null;
+		
+	}
+	
+}

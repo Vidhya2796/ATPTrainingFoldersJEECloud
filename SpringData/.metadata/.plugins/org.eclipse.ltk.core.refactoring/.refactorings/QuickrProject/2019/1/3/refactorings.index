@@ -1,0 +1,20 @@
+1547524065573	Rename package 'com.quickr'
+1547524138763	Delete element
+1547524152081	Rename package 'com.quickr.pojo'
+1547524184918	Delete element
+1547524205723	Rename package 'com.quickr.controller'
+1547524218283	Rename package 'com.quickr.model'
+1547524225718	Rename package 'com.quickr.service'
+1547524235113	Rename package 'com.quickr.RegistrationController'
+1547524244127	Rename package 'com.quickr.dao'
+1547524470060	Delete element
+1547524529553	Rename package 'com.quickr.UserDAO'
+1547525726008	Rename package 'com.quickr.UserRepository'
+1547525732284	Rename package 'com.quickr.UserController'
+1547525740911	Rename package 'com.quickr.UserModel'
+1547525754295	Rename package 'com.quickr.UserService'
+1547618602668	Rename type 'QuickrRegistrationApplication'
+1547618615501	Rename type 'QuickrRegistrationApplicationTests'
+1547619170127	Rename type 'UserController'
+1547619232620	Rename type 'UserRegistrationController'
+1547619400870	Rename type 'UserAccount'

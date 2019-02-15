@@ -1,0 +1,30 @@
+package com.vidhyac.zipcode.resource;
+
+import java.util.List;
+import java.util.Map;
+
+import javax.ws.rs.FormParam;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+import com.vidhyac.zipcode.dao.InfoDAO;
+import com.vidhyac.zipcode.model.Info;
+
+@Path("zipcode")
+public class ZipCode {
+	
+	InfoDAO dao=new InfoDAO();
+	
+	@POST
+	@Produces
+	public Map<Long, Info> getInfo(@FormParam("zipcode") long zipcode){
+		
+		if(zipcode==99501L) {
+			
+		}
+		return null;
+		
+	}
+	
+}

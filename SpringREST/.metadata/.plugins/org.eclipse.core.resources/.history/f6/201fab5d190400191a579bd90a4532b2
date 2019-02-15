@@ -1,0 +1,32 @@
+package com.vidhyac.validation.service;
+
+import java.util.List;
+
+import com.vidhyac.validation.dao.UserDAO;
+import com.vidhyac.validation.model.User;
+
+public class UserService {
+	
+	UserDAO dao;
+	String user=null;
+	String pass=null;
+	
+	
+	public UserService() {
+		dao=new UserDAO();
+		
+	}
+	
+	public boolean isValidUser() {
+		
+		for(User users:dao.getAllUsers()) {
+			
+			if(users.equals() && users.equals("vid")) {
+				return true;
+			}
+		}
+		return false;
+		
+	}
+	
+}

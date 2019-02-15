@@ -1,0 +1,6 @@
+package com.quickr.service;
+
+public class UserService {
+
+	private UserRepository userRepository;
+}

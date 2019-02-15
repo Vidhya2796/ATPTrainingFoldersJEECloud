@@ -1,0 +1,24 @@
+package com.vidhyac.assign5.dao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.vidhyac.assign5.model.Employee;
+
+public class EmployeeDAO {
+	
+	Map<Long, EmployeeV> map=new HashMap<>();
+	
+	public EmployeeDAO() {
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

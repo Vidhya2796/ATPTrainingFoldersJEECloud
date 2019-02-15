@@ -1,0 +1,5 @@
+package com.vidhyac.messenger.service;
+
+public class MessageService {
+
+}

@@ -1,0 +1,16 @@
+package com.vidhyac.emp.model;
+
+/*
+Create a Employee domain model class having following properties: employeeId,
+employeeName, employeeDepartment, employeeDesignation, employeeSalary. Employee Id
+should be generated automatically at database level.*/
+
+
+public class Employee {
+	private static long autoEmployeeId;
+	private long employeeId;
+}
+
+init{
+	employeeId=++autoEmployeeId;
+}

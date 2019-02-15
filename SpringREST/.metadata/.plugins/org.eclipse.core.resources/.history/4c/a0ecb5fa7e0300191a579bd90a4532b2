@@ -1,0 +1,15 @@
+package com.vidhyac.messenger.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.vidhyac.messenger.model.Message;
+
+public class MessageService {
+
+	public List<Message> getAllMessages() {
+		
+	}
+	public List<Message> m1=new ArrayList<>();
+	
+}

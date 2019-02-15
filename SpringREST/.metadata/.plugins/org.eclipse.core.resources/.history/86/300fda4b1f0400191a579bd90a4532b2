@@ -1,0 +1,42 @@
+package com.vidhyac.validation.authenticate;
+
+import javax.ws.rs.FormParam;
+
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.vidhyac.validation.dao.UserDAO;
+import com.vidhyac.validation.model.User;
+
+@Path("authenticate")
+public class Authentication {
+
+	private UserDAO dao=new UserDAO();
+	
+
+	@POST
+	@Produces(MediaType.TEXT_PLAIN)	
+	
+public String validUser(@FormParam("uname") String username,@FormParam("pass") String pass) {
+		
+		
+		for(User users:dao.getAllUsers()) {
+			
+			if(users.getUsername().equals(username) && users.getPassword().equals(pass)) 
+			{	
+				
+				return "Valid User";
+			}
+		}
+		
+		return "InValid User";
+		
+			
+		}
+		
+	}
+
+

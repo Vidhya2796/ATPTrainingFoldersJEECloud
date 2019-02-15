@@ -1,0 +1,8 @@
+package com.vidhya.SpringMongo.main;
+
+public class SpringDataMongoDBMain {
+	public static final String DB_NAME = "persondatabase";
+	public static final String PERSON_COLLECTION = "Person";
+	public static final String MONGO_HOST = "localhost";
+	public static final int MONGO_PORT = 27017;
+}

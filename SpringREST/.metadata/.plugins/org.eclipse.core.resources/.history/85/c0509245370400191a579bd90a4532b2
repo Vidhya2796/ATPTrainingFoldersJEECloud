@@ -1,0 +1,5 @@
+package com.vidhyac.emp.dao;
+
+public class EmployeeDAO {
+
+}

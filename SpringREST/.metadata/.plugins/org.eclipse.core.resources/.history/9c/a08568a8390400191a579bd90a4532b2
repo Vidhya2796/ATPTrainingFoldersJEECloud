@@ -1,0 +1,13 @@
+package com.vidhyac.emp.controller;
+
+import javax.ws.rs.FormParam;
+import javax.ws.rs.Path;
+
+@Path("employee")
+public class EmployeeResource {
+	
+	public void addEmployee(@FormParam("id") long empId,@FormParam("name") String empName,@FormParam("dept") String empId,) {
+		
+	}
+	
+}

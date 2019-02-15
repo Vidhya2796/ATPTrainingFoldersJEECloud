@@ -1,0 +1,6 @@
+package com.vidhya.SpringMongo.model;
+
+public class Person {
+	private String id;
+	
+}

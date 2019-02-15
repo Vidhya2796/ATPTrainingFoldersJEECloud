@@ -1,0 +1,39 @@
+package com.quickr.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.quickr.model.UserLoginAccount;
+import com.quickr.model.UserRegistrationAccount;
+import com.quickr.repository.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public void createUser(UserRegistrationAccount userRegistrationAccount) {
+		 
+	//userRepository.save(new UserAccount(userAccount.getUserName(), userAccount.getEmailId(),userAccount.getPhoneNumber(),userAccount.getPassword()));
+		userRepository.save(userRegistrationAccount);
+		
+	}
+
+	public boolean validateUser(UserLoginAccount userLoginAccount) {
+		
+		
+		userRepository.findById(userLoginAccount.getEmailId());
+		
+		
+		/*@GetMapping("/customers")
+		public List<Customer> getAllCustomers() {
+			System.out.println("Get all Customers...");
+	 
+			List<Customer> customers = new ArrayList<>();
+			repository.findAll().forEach(customers::add);
+	 
+			return customers;
+		}*/
+	}
+}

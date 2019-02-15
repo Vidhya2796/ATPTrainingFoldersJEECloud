@@ -1,0 +1,53 @@
+package com.quickr.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.quickr.model.UserLoginAccount;
+import com.quickr.model.UserRegistrationAccount;
+import com.quickr.service.UserService;
+
+@CrossOrigin(origins="http://localhost:4200")
+@RestController
+@RequestMapping("/quickr")
+public class UserController {
+	
+	@Autowired
+private UserService userService;
+	
+	
+	@PostMapping("/users/create")
+	public void createUser(@RequestBody UserRegistrationAccount userRegistrationAccount) {
+		userService.createUser(userRegistrationAccount);
+			
+	}
+	
+	@GetMapping("/users/login")
+	public String validateUser(@RequestBody UserRegistrationAccount UserRegistrationAccount) {
+		return userService.validateUser(UserRegistrationAccount);
+		
+	}
+	
+/*	@RequestMapping(method = RequestMethod.POST, value = "/login")
+	private String validateUser(@RequestBody User loginUser) {
+		return ts.validateUser(loginUser.getName(), loginUser.getPassword());
+
+	}
+	
+	@GetMapping("/customers")
+	public List<Customer> getAllCustomers() {
+		System.out.println("Get all Customers...");
+ 
+		List<Customer> customers = new ArrayList<>();
+		repository.findAll().forEach(customers::add);
+ 
+		return customers;
+	}*/
+	
+
+}

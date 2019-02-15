@@ -1,0 +1,25 @@
+package com.vidhyac.messenger.resources;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.vidhyac.messenger.model.Message;
+
+@Path("messages")
+public class MessageResource {
+
+	
+	/*public String getMessages() {
+		return "Hello World!!";
+	}*/
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public List<Message> getMessages() {
+		return "Hello World!!";
+	}
+	
+}

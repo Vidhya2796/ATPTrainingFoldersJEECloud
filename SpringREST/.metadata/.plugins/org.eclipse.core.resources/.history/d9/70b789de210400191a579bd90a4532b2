@@ -1,0 +1,22 @@
+package com.vidhyac.zipcode.resource;
+
+import java.util.List;
+
+import javax.ws.rs.FormParam;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+import com.vidhyac.zipcode.model.Info;
+
+@Path("zipcode")
+public class ZipCode {
+	
+	@POST
+	@Produces
+	public List<Info> getInfo(@FormParam("zipcode") long zipcode){
+		return null;
+		
+	}
+	
+}

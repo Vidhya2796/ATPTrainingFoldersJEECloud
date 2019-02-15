@@ -1,0 +1,15 @@
+package com.vidhyac.assign5.controller;
+
+import com.vidhyac.assign5.dao.EmployeeDAO;
+
+public class AddEmployee {
+
+	
+	EmployeeDAO dao=new EmployeeDAO();
+	
+	
+	
+	
+	
+	
+}

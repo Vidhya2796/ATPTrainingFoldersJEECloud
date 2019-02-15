@@ -1,0 +1,15 @@
+package com.vidhya.springbootstarter;
+
+
+
+@SpringBootApplication
+public class CourseApiApp {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+
+}

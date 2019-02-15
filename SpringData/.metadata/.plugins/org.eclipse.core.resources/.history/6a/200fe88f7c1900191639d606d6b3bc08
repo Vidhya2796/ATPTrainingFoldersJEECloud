@@ -1,0 +1,80 @@
+package com.quickr.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.quickr.model.UserLoginAccount;
+import com.quickr.model.UserRegistrationAccount;
+import com.quickr.service.UserService;
+
+@CrossOrigin(origins="http://localhost:4200")
+@RestController
+@RequestMapping("/quickr")
+public class UserController {
+	
+	@Autowired
+private UserService userService;
+	
+	
+	@PostMapping("/users/create")
+	public void createUser(@RequestBody UserRegistrationAccount userRegistrationAccount) {
+		userService.createUser(userRegistrationAccount);
+			
+	}
+	
+	@PostMapping("/users/login")
+	public String validateUser(@RequestBody UserLoginAccount userLoginAccount) {
+		System.out.println(userService.validateUser(userLoginAccount));
+		return userService.validateUser(userLoginAccount);
+		
+	}
+	
+	@GetMapping("/users")
+	public List<UserRegistrationAccount> getAllUsers() {
+		System.out.println("Get all Users...");
+		
+		return userService.getAllUsers();
+	}
+	
+	@GetMapping("/users/username/{userName}")
+	public Optional<UserRegistrationAccount> getUserByName(@PathVariable String userName) {
+		System.out.println("Get sprcific User by name...");
+		return userService.getUserByName(userName);
+	}
+	
+/*
+	@GetMapping("customers/age/{age}")
+	public List<Customer> findByAge(@PathVariable int age) {
+ 
+		List<Customer> customers = repository.findByAge(age);
+		return customers;
+	}*/
+		
+	
+/*	@RequestMapping(method = RequestMethod.POST, value = "/login")
+	private String validateUser(@RequestBody User loginUser) {
+		return ts.validateUser(loginUser.getName(), loginUser.getPassword());
+
+	}
+	
+	@GetMapping("/customers")
+	public List<Customer> getAllCustomers() {
+		System.out.println("Get all Customers...");
+ 
+		List<Customer> customers = new ArrayList<>();
+		repository.findAll().forEach(customers::add);
+ 
+		return customers;
+	}*/
+	
+
+}

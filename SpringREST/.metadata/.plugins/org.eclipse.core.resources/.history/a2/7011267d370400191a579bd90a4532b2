@@ -1,0 +1,27 @@
+package com.vidhyac.emp.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.vidhyac.emp.model.Employee;
+
+
+public class EmployeeDAO {
+	
+	public List<Employee> getAllUsers() {
+		List<User> usersList=new ArrayList<>();
+		
+		User u1=new User("Vidhya", "vid");
+		User u2=new User("Suraj", "sur");
+		User u3=new User("Preethi", "pre");
+		
+		usersList.add(u1);
+		usersList.add(u2);
+		usersList.add(u3);
+		
+		return usersList;
+	}
+	
+	
+	
+}

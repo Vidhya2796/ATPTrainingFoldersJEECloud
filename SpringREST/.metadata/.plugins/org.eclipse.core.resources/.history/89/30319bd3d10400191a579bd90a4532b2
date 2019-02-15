@@ -1,0 +1,39 @@
+package com.vidhyac.assign5.controller;
+
+import java.util.Map;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.vidhyac.assign5.dao.EmployeeDAO;
+import com.vidhyac.assign5.model.Employee;
+
+@Path("findall")
+public class FindAllEmployee {
+	EmployeeDAO dao=new EmployeeDAO();
+	Map<Integer, Employee> map=dao.getAllEmp();
+	
+	@Path("{id}")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	
+	public String findAllEmp(@PathParam("id") Integer id) {
+		
+
+		 for (Map.Entry<Integer,Employee> entry : map.entrySet())  {
+			 
+			 if (zipcode==entry.getKey()) {
+				  Info info=entry.getValue();
+				  return info;
+			}  
+	            
+		 }//for loop ends here
+	
+		return map.toString();
+		
+		
+	}
+}

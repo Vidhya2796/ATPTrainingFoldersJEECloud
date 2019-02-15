@@ -1,0 +1,5 @@
+package com.vidhyac.validation.model;
+
+public class UserDetails {
+
+}

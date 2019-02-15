@@ -1,0 +1,61 @@
+package com.quickr.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.quickr.model.UserLoginAccount;
+import com.quickr.model.UserRegistrationAccount;
+import com.quickr.repository.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public void createUser(UserRegistrationAccount userRegistrationAccount) {
+		 
+	//userRepository.save(new UserAccount(userAccount.getUserName(), userAccount.getEmailId(),userAccount.getPhoneNumber(),userAccount.getPassword()));
+		userRepository.save(userRegistrationAccount);
+		
+	}
+
+	public String validateUser(UserLoginAccount userLoginAccount) {
+		
+	
+		List<UserRegistrationAccount> users=userRepository.findAll();
+		for(UserRegistrationAccount user:users) {
+			if(user.getEmailId().equals(userLoginAccount.getEmailId())&& user.getEmailId().equals(userLoginAccount.getEmailId())) {
+				
+			}
+		}
+		
+		
+		
+		return "login failed";
+		
+		/*//sunil code
+		public String validateUser(String name, String password) {
+			List<User> users = new ArrayList<>();
+			ur.findAll().forEach(users::add);
+				for (User user : users) {
+			if (name.equals(user.name) && password.equals(user.password)) {
+				return "Login successful!";
+			}}
+			return "Login failed!";
+		}*/
+		/*@GetMapping("/customers")
+		public List<Customer> getAllCustomers() {
+			System.out.println("Get all Customers...");
+	 
+			List<Customer> customers = new ArrayList<>();
+			repository.findAll().forEach(customers::add);
+	 
+			return customers;
+		}*/
+	}
+}

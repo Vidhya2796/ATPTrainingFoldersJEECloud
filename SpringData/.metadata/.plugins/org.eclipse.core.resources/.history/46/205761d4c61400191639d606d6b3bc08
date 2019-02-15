@@ -1,0 +1,23 @@
+package com.vidhya.SpringMongo.main;
+
+import java.net.UnknownHostException;
+
+public class SpringDataMongoDBMain {
+	public static final String DB_NAME = "vidhya";
+	public static final String PERSON_COLLECTION = "person";
+	public static final String MONGO_HOST = "localhost";
+	public static final int MONGO_PORT = 27017;
+	
+	public static void main(String[] args) {
+		try {
+			
+		}catch (UnknownHostException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+}

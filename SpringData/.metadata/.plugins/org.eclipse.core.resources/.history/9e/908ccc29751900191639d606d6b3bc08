@@ -1,0 +1,52 @@
+package com.quickr.service;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.quickr.model.UserLoginAccount;
+import com.quickr.model.UserRegistrationAccount;
+import com.quickr.repository.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public void createUser(UserRegistrationAccount userRegistrationAccount) {
+		 
+	//userRepository.save(new UserAccount(userAccount.getUserName(), userAccount.getEmailId(),userAccount.getPhoneNumber(),userAccount.getPassword()));
+		userRepository.save(userRegistrationAccount);
+		
+	}
+
+	public String validateUser(UserLoginAccount userLoginAccount) {
+
+		List<UserRegistrationAccount> users=userRepository.findAll();
+		for(UserRegistrationAccount user:users) {
+			if(user.getEmailId().equals(userLoginAccount.getEmailId()) && user.getPassword().equals(userLoginAccount.getPassword())) {
+				return "Login Success!";
+			}
+		}
+		return "login failed";
+		
+	}
+
+	public List<UserRegistrationAccount> getAllUsers() {
+	
+		 
+		List<UserRegistrationAccount> users = new ArrayList<>();
+		userRepository.findAll().forEach(users::add);
+ 
+		return users;
+	}
+
+	public List<UserRegistrationAccount> getUserByName(String userName) {
+		List<UserRegistrationAccount> users = userRepository.getUserByName(userName);
+		return users;
+	}
+}

@@ -1,0 +1,31 @@
+package com.vidhyac.assign5.controller;
+
+import java.util.Map;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.vidhyac.assign5.dao.EmployeeDAO;
+import com.vidhyac.assign5.model.Employee;
+
+@Path("findall")
+public class FindAllEmployee {
+	EmployeeDAO dao=new EmployeeDAO();
+	Map<Integer, Employee> map=dao.getAllEmp();
+	
+	@Path("{id}")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	
+	public String addEmp(@PathParam("id") Integer id,@PathParam("name") String name,@PathParam("dept") String dept,@PathParam("design") String design,@PathParam("sal") Double sal) {
+		
+		map.put(id, new Employee(name, dept, design, sal));
+		
+		return map.toString();
+		
+		
+	}
+}

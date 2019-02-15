@@ -1,0 +1,9 @@
+package com.vidhyac.messenger.resources;
+
+public class MessageResource {
+
+	
+	public String getMessages() {
+		
+	}
+}

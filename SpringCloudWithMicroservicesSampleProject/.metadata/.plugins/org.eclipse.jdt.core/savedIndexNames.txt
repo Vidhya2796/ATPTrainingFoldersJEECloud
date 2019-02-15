@@ -1,0 +1,15 @@
+INDEX VERSION 1.131+C:\164457_Vidhya\STS\SpringCloudWithMicroservicesSampleProject\.metadata\.plugins\org.eclipse.jdt.core
+3683643656.index
+3569690339.index
+514451458.index
+2473252455.index
+36484008.index
+2955541919.index
+2053962797.index
+1984636568.index
+1430894800.index
+901677460.index
+1050042363.index
+3556105283.index
+1103027879.index
+255480509.index

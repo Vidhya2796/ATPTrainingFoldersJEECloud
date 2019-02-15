@@ -1,0 +1,9 @@
+package com.quickr.model;
+
+public class Link {
+
+	private String link;
+	private String rel;
+	
+	
+}

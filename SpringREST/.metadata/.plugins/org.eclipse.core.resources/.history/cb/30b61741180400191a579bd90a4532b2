@@ -1,0 +1,14 @@
+package com.vidhyac.validation.service;
+
+
+
+public class UserService {
+	
+	UserDAO dao;
+	
+	public UserService() {
+		dao=new UserService();
+	}
+	
+	
+}

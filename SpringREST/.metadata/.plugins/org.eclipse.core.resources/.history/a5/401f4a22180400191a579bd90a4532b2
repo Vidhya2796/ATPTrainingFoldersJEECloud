@@ -1,0 +1,5 @@
+package com.vidhyac.validation.dao;
+
+public class UserDAO {
+
+}

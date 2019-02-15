@@ -1,0 +1,2 @@
+spring.data.mongodb.database=aaa
+spring.data.mongodb.port=27017

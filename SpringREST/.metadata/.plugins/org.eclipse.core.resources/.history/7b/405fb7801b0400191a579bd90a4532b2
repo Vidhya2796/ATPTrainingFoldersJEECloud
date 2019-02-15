@@ -1,0 +1,38 @@
+package com.vidhyac.validation.service;
+
+import java.util.List;
+
+import javax.ws.rs.PUT;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.vidhyac.validation.dao.UserDAO;
+import com.vidhyac.validation.model.User;
+
+public class UserService {
+	
+	UserDAO dao;
+	String username=null;
+	String pass=null;
+	
+	
+	public UserService() {
+		dao=new UserDAO();
+		
+	}
+	/*
+	@PUT
+	@Produces(MediaType.TEXT_PLAIN)*/
+	public boolean isValidUser(String username,String pass) {
+		
+		for(User users:dao.getAllUsers()) {
+			
+			if(users.equals(username) && users.equals(pass)) {
+				return true;
+			}
+		}
+		return false;
+		
+	}
+	
+}

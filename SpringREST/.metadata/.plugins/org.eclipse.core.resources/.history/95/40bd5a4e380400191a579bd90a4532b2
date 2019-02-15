@@ -1,0 +1,12 @@
+package com.vidhyac.emp.controller;
+
+import javax.ws.rs.Path;
+
+@Path("employee")
+public class EmployeeResource {
+	
+	public void addEmployee() {
+		
+	}
+	
+}

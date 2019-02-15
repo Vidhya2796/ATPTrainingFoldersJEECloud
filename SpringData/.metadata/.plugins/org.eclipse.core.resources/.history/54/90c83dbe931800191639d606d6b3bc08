@@ -1,0 +1,17 @@
+package com.quickr.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import com.quickr.model.UserAccount;
+import com.quickr.repository.UserRepository;
+
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public void createUser(UserAccount userAccount) {
+		 
+		UserAccount _user = userRepository.save(new UserAccount(userAccount.getUserName(), userAccount.getEmailId(),userAccount.getPhoneNumber(),userAccount.getPassword()));
+		
+	}
+}

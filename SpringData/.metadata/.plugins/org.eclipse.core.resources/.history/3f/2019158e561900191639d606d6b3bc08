@@ -1,0 +1,7 @@
+package com.quickr.model;
+
+public class UserLoginAccount {
+	
+	private String emailId;
+	private String password;
+}

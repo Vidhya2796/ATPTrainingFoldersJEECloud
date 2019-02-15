@@ -1,0 +1,67 @@
+package com.vidhyac.assign5.model;
+
+public class Employee {
+	private static long autoEmpId;
+	private long empId;
+	private String empName;
+	private String empDept;
+	private String empDesign;
+	private double empSal;
+	
+	public static long getAutoEmpId() {
+		return autoEmpId;
+	}
+	public static void setAutoEmpId(long autoEmpId) {
+		Employee.autoEmpId = autoEmpId;
+	}
+	public long getEmpId() {
+		return empId;
+	}
+	public void setEmpId(long empId) {
+		this.empId = empId;
+	}
+	public String getEmpName() {
+		return empName;
+	}
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+	public String getEmpDept() {
+		return empDept;
+	}
+	public void setEmpDept(String empDept) {
+		this.empDept = empDept;
+	}
+	public String getEmpDesign() {
+		return empDesign;
+	}
+	public void setEmpDesign(String empDesign) {
+		this.empDesign = empDesign;
+	}
+	public double getEmpSal() {
+		return empSal;
+	}
+	public void setEmpSal(double empSal) {
+		this.empSal = empSal;
+	}
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", empName=" + empName + ", empDept=" + empDept + ", empDesign=" + empDesign
+				+ ", empSal=" + empSal + "]";
+	}
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Employee(long empId, String empName, String empDept, String empDesign, double empSal) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.empDept = empDept;
+		this.empDesign = empDesign;
+		this.empSal = empSal;
+	}
+	
+	
+	
+}

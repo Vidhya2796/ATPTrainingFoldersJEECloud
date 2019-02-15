@@ -1,0 +1,3 @@
+server.port=4001
+spring.data.mongodb.database=quickrDatabase1
+spring.data.mongodb.port=27017

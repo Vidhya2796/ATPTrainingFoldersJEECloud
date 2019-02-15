@@ -1,0 +1,6 @@
+package com.vidhyac.validation.model;
+
+public class UserDetails {
+	private String username;
+	private String password;
+}

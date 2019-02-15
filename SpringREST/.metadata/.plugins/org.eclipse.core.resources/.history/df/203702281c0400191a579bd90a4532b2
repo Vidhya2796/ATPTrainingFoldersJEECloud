@@ -1,0 +1,54 @@
+package com.vidhyac.validation.authenticate;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.vidhyac.validation.dao.UserDAO;
+import com.vidhyac.validation.model.User;
+import com.vidhyac.validation.service.UserService;
+
+@Path("authenticate")
+public class Authentication {
+	
+	private UserService service;
+	private UserDAO dao;
+	private boolean valid;
+	
+	public Authentication() {
+		service=new UserService();
+		dao=new UserDAO();
+	}
+	
+	
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	
+public boolean isValidUser(@PathParam("uname") String username,@PathParam("pass") String pass) {
+		
+		for(User users:dao.getAllUsers()) {
+			
+			if(users.getUsername().equals(username) && users.getPassword().equals(pass)) 
+			{	
+				valid=true;
+				return true;
+			}
+		}
+		return false;
+		
+	}
+
+
+	public String authenticate() {
+		String username = null;
+		String pass = null;
+		valid=isValidUser()
+		if(valid==true)
+		return "Valid";
+		else
+			return "not valid";
+	}
+}

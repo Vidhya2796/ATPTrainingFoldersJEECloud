@@ -1,0 +1,19 @@
+package com.vidhyac.assign5.dao;
+
+public class EmployeeDAO {
+	EmployeeDAO dao=new EmployeeDAO();
+	
+	
+	public EmployeeDAO() {
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.vidhyac.emp.controller;
+
+public class EmployeeResource {
+	
+}

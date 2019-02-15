@@ -1,0 +1,21 @@
+package com.quickr.UserModel;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "userAccount")
+public class UserAccount {
+	
+	private String userName;
+	@Id
+	private String emailId;
+	private String phoneNumber;
+	private String password;
+	
+	
+	
+	
+	
+	
+	
+}

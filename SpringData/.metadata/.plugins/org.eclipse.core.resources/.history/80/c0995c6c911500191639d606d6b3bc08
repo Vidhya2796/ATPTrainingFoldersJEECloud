@@ -1,0 +1,5 @@
+package com.vidhya.topic;
+
+public interface TopicRepository {
+
+}

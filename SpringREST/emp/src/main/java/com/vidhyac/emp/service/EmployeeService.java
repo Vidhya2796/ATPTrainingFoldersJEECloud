@@ -1,0 +1,39 @@
+package com.vidhyac.emp.service;
+
+import java.util.List;
+
+import javax.ws.rs.FormParam;
+
+import com.vidhyac.emp.dao.EmployeeDAO;
+import com.vidhyac.emp.model.Employee;
+
+public class EmployeeService {
+
+	
+	private EmployeeDAO dao;
+	
+	public EmployeeService(){
+		dao=new EmployeeDAO();
+	}
+
+	/*public EmployeeDAO getDao() {
+		return dao;
+	}
+
+	public void setDao(EmployeeDAO dao) {
+		this.dao = dao;
+	}*/
+	
+public String addEmployeeSer(long empId,String empName,String empDept,String empDesign,Double empSal) {
+		System.out.println("vidhya");
+	List<Employee> empList=dao.getEmpList();
+
+	empList.add(new Employee(empId, empName, empDept, empDesign, empSal));
+	
+	
+	return ""+empList;
+	
+	}
+
+	
+}

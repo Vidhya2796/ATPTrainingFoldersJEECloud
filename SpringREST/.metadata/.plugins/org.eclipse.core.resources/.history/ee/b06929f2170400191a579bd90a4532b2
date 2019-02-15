@@ -1,0 +1,21 @@
+package com.vidhyac.validation.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.vidhyac.validation.model.User;
+
+public class UserService {
+	
+	
+	public List<User> getAllUsers() {
+		List<User> usersList=new ArrayList<>();
+		
+		User u1=new User("Vidhya", "vid";
+		)
+		
+		
+	}
+	
+	
+}

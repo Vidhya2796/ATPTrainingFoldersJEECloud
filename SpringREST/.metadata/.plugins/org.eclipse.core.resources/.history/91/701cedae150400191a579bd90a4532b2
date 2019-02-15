@@ -1,0 +1,8 @@
+package com.vidhyac.helloworld.resource;
+
+import javax.ws.rs.Path;
+
+@Path("helloworld")
+public class ShowHello {
+
+}

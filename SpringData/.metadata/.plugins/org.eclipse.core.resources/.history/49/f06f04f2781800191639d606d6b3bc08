@@ -1,0 +1,14 @@
+package com.quickr.UserModel;
+
+public class UserAccount {
+	
+	private String userName;
+	private String emailId;
+	private String phoneNumber;
+	private String password;
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,13 @@
+package com.vidhya.SpringMongo.model;
+
+import org.springframework.data.annotation.Id;
+
+public class Person {
+	
+	@Id
+	private String id;
+	
+	private String name;
+	private String address;
+	
+}

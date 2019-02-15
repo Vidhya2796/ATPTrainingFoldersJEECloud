@@ -1,0 +1,5 @@
+package com.vidhya.springbootstarter.hello;
+
+public class HelloController {
+
+}

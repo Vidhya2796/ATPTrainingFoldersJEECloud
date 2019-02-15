@@ -1,0 +1,17 @@
+package com.vidhyac.validation.service;
+
+import com.vidhyac.validation.dao.UserDAO;
+
+public class UserService {
+	
+	UserDAO dao;
+	
+	public UserService() {
+		dao=new UserDAO();
+	}
+	
+	public boolean isValidUser() {
+		
+	}
+	
+}

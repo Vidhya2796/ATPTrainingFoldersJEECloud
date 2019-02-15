@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+C:\164457_Vidhya\STS\SpringREST\.metadata\.plugins\org.eclipse.jdt.core
+1149327647.index
+1859453467.index
+350805714.index
+54703828.index
+3959803159.index
+2949375836.index
+2249643126.index

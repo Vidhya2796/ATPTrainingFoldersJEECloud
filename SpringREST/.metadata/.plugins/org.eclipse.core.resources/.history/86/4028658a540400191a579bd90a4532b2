@@ -1,0 +1,36 @@
+package com.vidhyac.assign5.controller;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.vidhyac.assign5.dao.EmployeeDAO;
+
+@Path("add")
+public class AddEmployee {
+
+	
+	EmployeeDAO dao=new EmployeeDAO();
+	dao.getAllEmp();
+	
+	@Path("{id}/{name}/{dept}/{design}/{sal}")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	
+	public String addEmp(@PathParam("id") long id,@PathParam("name") String name,@PathParam("dept") String dept,@PathParam("design") String design,@PathParam("sal") Double sal) {
+		
+		
+		
+		return design;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+}

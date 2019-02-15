@@ -1,0 +1,6 @@
+package com.vidhyac.messenger.model;
+
+public class Message {
+	private long id;
+	
+}

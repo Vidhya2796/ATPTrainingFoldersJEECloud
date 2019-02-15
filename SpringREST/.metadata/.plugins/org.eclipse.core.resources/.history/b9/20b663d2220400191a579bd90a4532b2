@@ -1,0 +1,22 @@
+package com.vidhyac.zipcode.dao;
+
+import java.util.Map;
+
+import javax.ws.rs.FormParam;
+
+import com.vidhyac.zipcode.model.Info;
+
+public class InfoDAO {
+	
+	
+public Map<Long, Info> getInfo(){
+		
+		Map<Long, Info> map=new Map<Long, Info>();
+		
+		map.put(99501, new Info("Ak", "ANCHORAGE", "US"))
+		
+		return null;
+		
+	}
+	
+}

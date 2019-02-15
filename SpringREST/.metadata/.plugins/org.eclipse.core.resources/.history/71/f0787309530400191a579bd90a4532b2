@@ -1,0 +1,24 @@
+package com.vidhyac.assign5.dao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.vidhyac.assign5.model.Employee;
+
+public class EmployeeDAO {
+	
+	Map<Long, Employee> map=new HashMap<Long, Employee>();
+	
+	public EmployeeDAO() {
+		
+		map.put(1L, new Employee("Vidhya","JEE", "Analyst",30000));
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

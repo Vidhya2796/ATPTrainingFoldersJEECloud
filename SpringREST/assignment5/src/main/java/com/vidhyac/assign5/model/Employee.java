@@ -1,0 +1,56 @@
+package com.vidhyac.assign5.model;
+
+public class Employee {
+	
+	private String empName;
+	private String empDept;
+	private String empDesign;
+	private double empSal;
+	
+
+	public String getEmpName() {
+		return empName;
+	}
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+	public String getEmpDept() {
+		return empDept;
+	}
+	public void setEmpDept(String empDept) {
+		this.empDept = empDept;
+	}
+	public String getEmpDesign() {
+		return empDesign;
+	}
+	public void setEmpDesign(String empDesign) {
+		this.empDesign = empDesign;
+	}
+	public double getEmpSal() {
+		return empSal;
+	}
+	public void setEmpSal(double empSal) {
+		this.empSal = empSal;
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee [empName=" + empName + ", empDept=" + empDept + ", empDesign=" + empDesign + ", empSal="
+				+ empSal + "]";
+	}
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Employee(String empName, String empDept, String empDesign, double empSal) {
+		super();
+		
+		this.empName = empName;
+		this.empDept = empDept;
+		this.empDesign = empDesign;
+		this.empSal = empSal;
+	}
+	
+	
+	
+}

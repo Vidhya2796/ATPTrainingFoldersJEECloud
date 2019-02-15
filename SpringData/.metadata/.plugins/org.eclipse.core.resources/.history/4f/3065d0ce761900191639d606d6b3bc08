@@ -1,0 +1,13 @@
+package com.quickr.repository;
+
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.quickr.model.UserRegistrationAccount;
+
+public interface UserRepository extends MongoRepository<UserRegistrationAccount, String>{
+
+	//List<UserRegistrationAccount> getUserByName(String userName);
+	
+}
